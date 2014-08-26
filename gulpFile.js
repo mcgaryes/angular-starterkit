@@ -2,7 +2,6 @@ var gulp = require("gulp");
 var nodemon = require("gulp-nodemon");
 var rsass = require("gulp-ruby-sass");
 var watch = require("gulp-watch");
-var mainBowerFiles = require('main-bower-files');
 
 gulp.task("dev", function() {
 
@@ -26,8 +25,4 @@ gulp.task("dev", function() {
 			})
 			.pipe(gulp.dest("./app/assets/css/"));
 	});
-});
-
-gulp.task('bower', function() {
-	return gulp.src(mainBowerFiles(), { base: './bower_components' }).pipe(gulp.dest("./app/assets/js/"))
 });
